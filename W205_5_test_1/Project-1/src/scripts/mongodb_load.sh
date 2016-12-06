@@ -49,12 +49,7 @@ for json in $(cat file_list.txt); do
   echo "Product Name : "$product
   echo "Start loading file:$json" 
 
-  #!/usr/bin/env mongo
-  var db = new Mongo().getDB($string1$product$string2)
-  db.dropDatabase()
-  var col = new Mongo().getCollection($string1$product$string3)
-  db.$string1$product$string3.drop()
-  
+
   mongoimport --db $string1$product$string2 --collection $string1$product$string3 --type json --file /$dir1/data/rawdata/$product/$json
   echo $string1$product$string2
   echo $string1$product$string3
