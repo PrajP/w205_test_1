@@ -4,6 +4,7 @@
 
 NOW=$(date +"%Y-%m-%d")
 echo $NOW
+whoami
 
 dir1=$'data/w205_test_1/W205_5_test_1/Project-1'
 
@@ -11,7 +12,7 @@ cd /$dir1/src/scripts
 #cd /data/src/scripts
 echo "Now in:"$(pwd)
 
-#whoami
+
 #su - w205
 
 echo 'Make directory structures for all hdfs files.'
