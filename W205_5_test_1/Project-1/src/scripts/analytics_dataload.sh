@@ -9,9 +9,10 @@ dir1=$'data/w205_test_1/W205_5_test_1/Project-1'
 
 cd /$dir1/src/scripts
 #cd /data/src/scripts
-echo $(pwd)
+echo "Now in:"$(pwd)
 
-su - w205
+#whoami
+#su - w205
 
 echo 'Make directory structures for all hdfs files.'
 hdfs dfs -mkdir -p /user/w205/product_features/
