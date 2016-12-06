@@ -5,7 +5,7 @@
 NOW=$(date +"%Y-%m-%d")
 echo $NOW
 
-dir1=$(/data/w205_test_1/Project-1/)
+dir1=$(/data/w205_test_1/W205_5_test_1/Project-1)
 
 cd $dir1/src/scripts
 #cd /data/src/scripts
