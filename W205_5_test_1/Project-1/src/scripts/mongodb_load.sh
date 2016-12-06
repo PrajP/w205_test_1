@@ -3,6 +3,8 @@
 echo "HOME: $HOME"
 cd $HOME 
 
+
+
 current_dir=$(pwd)
 echo "pwd:"$current_dir
 
@@ -47,7 +49,11 @@ for json in $(cat file_list.txt); do
   echo "Product Name : "$product
   echo "Start loading file:$json" 
 
-  cd 
+  #!/usr/bin/env mongo
+  var db = new Mongo().getDB("$string1$product$string2");
+  db.dropDatabase();
+  db.$string1$product$string3.drop();
+  
   mongoimport --db $string1$product$string2 --collection $string1$product$string3 --type json --file /$dir1/data/rawdata/$product/$json
   echo $string1$product$string2
   echo $string1$product$string3
