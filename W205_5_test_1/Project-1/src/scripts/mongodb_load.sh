@@ -1,13 +1,31 @@
 #!/bin/sh
 
-#echo 'Importing files one by one\n'
+echo "HOME: $HOME"
+cd $HOME 
 
-#echo "pwd:"$(pwd)
-#current_dir = $(pwd)
+current_dir=$(pwd)
+echo "pwd:"$current_dir
+
+#dir1=$/data/W205_5_group_allan_eric_praj/Project-1/
+dir1=$(/data/w205_test_1/Project-1/)
+
+
 NOW=$(date +"%Y-%m-%d")
 echo $NOW
 LOGFILE="log-$NOW.log"
-cd /data/src/scripts
+
+#cd /data/src/scripts
+#cd /data/W205_5_group_allan_eric_praj/Project-1/data/
+cd /data/w205_test_1/Project-1/data/
+
+echo $(pwd)
+#chmod 777 /data/W205_5_group_allan_eric_praj/Project-1/data/rawdata/
+#chmod 777 /data/W205_5_group_allan_eric_praj/Project-1/data/rawdata/
+chmod 777 /$dir1/data/rawdata/
+
+
+
+cd /$dir1/src/scripts/
 #current_dir = $(pwd)
 
 echo "current directory: "$(pwd)
@@ -29,7 +47,7 @@ for json in $(cat file_list.txt); do
   echo "Start loading file:$json" 
 
   
-  mongoimport --db $string1$product$string2 --collection $string1$product$string3 --type json --file /data/rawdata/$product/$json
+  mongoimport --db $string1$product$string2 --collection $string1$product$string3 --type json --file /$dir1/data/rawdata/$product/$json
   echo $string1$product$string2
   echo $string1$product$string3
   echo 'Sleeping 10 seconds.'
