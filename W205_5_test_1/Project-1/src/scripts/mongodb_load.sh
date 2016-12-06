@@ -7,7 +7,7 @@ current_dir=$(pwd)
 echo "pwd:"$current_dir
 
 #dir1=$/data/W205_5_group_allan_eric_praj/Project-1/
-dir1=$(/data/w205_test_1/W205_5_test_1/Project-1/)
+dir1=$(data/w205_test_1/W205_5_test_1/Project-1/)
 
 
 NOW=$(date +"%Y-%m-%d")
@@ -16,7 +16,7 @@ LOGFILE="log-$NOW.log"
 
 #cd /data/src/scripts
 #cd /data/W205_5_group_allan_eric_praj/Project-1/data/
-cd $dir1/data/
+cd /$dir1/data/
 
 echo $(pwd)
 #chmod 777 /data/W205_5_group_allan_eric_praj/Project-1/data/rawdata/
