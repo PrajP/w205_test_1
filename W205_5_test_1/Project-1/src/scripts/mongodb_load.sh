@@ -7,7 +7,7 @@ current_dir=$(pwd)
 echo "pwd:"$current_dir
 
 #dir1=$/data/W205_5_group_allan_eric_praj/Project-1/
-dir1=$'data/w205_test_1/W205_5_test_1/Project-1/'
+dir1=$'data/w205_test_1/W205_5_test_1/Project-1'
 
 echo "dir1 :"$dir1
 
@@ -47,7 +47,7 @@ for json in $(cat file_list.txt); do
   echo "Product Name : "$product
   echo "Start loading file:$json" 
 
-  
+  cd 
   mongoimport --db $string1$product$string2 --collection $string1$product$string3 --type json --file /$dir1/data/rawdata/$product/$json
   echo $string1$product$string2
   echo $string1$product$string3
