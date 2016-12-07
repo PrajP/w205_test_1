@@ -26,7 +26,12 @@ sleep 5
 echo 'Directory structures completed.'
 
 
-echo 'Removing files temporary files.'
+#echo 'Removing files temporary files.'
+
+chown -R w205 /$dir1/data/analysis_output/
+chgrp -R w205 /$dir1/data/analysis_output/
+chmod 777 /$dir1/data/analysis_output/
+
 rm -r /$dir1/data/analysis_output/apple_result_temp.tsv
 rm -r /$dir1/data/analysis_output/google_result_temp.tsv
 rm -r /$dir1/data/analysis_output/samsung_result_temp.tsv
