@@ -29,9 +29,13 @@ for json in $(cat file_list.txt); do
   product=$(echo $json| cut -d"_" -f 1)
   echo "Product Name : "$product
 
-  var db = new Mongo().getDB($string1$product$string2);
-  db.dropDatabase();
-  var col = new Mongo().getCollection($string1$product$string3);
-  db.$string1$product$string3.drop();
+  mongo $string1$product$string2 --eval collection $string1$product$string3.drop()
+  
+  #mongoimport -d $string1$product$string2 -c $string1$product$string3 --drop --file file.json
+  
+  #var db = new Mongo().getDB($string1$product$string2);
+  #db.dropDatabase();
+  #var col = new Mongo().getCollection($string1$product$string3);
+  #db.$string1$product$string3.drop();
 
 done
