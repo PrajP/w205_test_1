@@ -21,6 +21,8 @@ hdfs dfs -mkdir -p /user/w205/analysis_data/apple/
 hdfs dfs -mkdir -p /user/w205/analysis_data/samsung/
 hdfs dfs -mkdir -p /user/w205/analysis_data/google/
 hdfs dfs -mkdir -p /user/w205/analysis_data/features/
+mkdir /$dir1/data/analysis_output_temp/
+chmod 777 /$dir1/data/analysis_output_temp/
 sleep 5
 echo 'Directory structures completed.'
 
@@ -45,9 +47,9 @@ echo 'Removed hive table location files..'
 
 echo 'Copy clean analysis files after removing headers to as temporary files.'
 
-tail -n +2 /$dir1/data/analysis_output/apple_result.tsv > /$dir1/data/analysis_output/apple_result_temp.tsv
-tail -n +2 /$dir1/data/analysis_output/google_result.tsv > /$dir1/data/analysis_output/google_result_temp.tsv
-tail -n +2 /$dir1/data/analysis_output/samsung_result.tsv > /$dir1/data/analysis_output/samsung_result_temp.tsv
+tail -n +2 /$dir1/data/analysis_output/apple_result.tsv > /$dir1/data/analysis_output_temp/apple_result_temp.tsv
+tail -n +2 /$dir1/data/analysis_output/google_result.tsv > /$dir1/data/analysis_output_temp/google_result_temp.tsv
+tail -n +2 /$dir1/data/analysis_output/samsung_result.tsv > /$dir1/data/analysis_output_temp/samsung_result_temp.tsv
 
 sleep 5
 
@@ -65,9 +67,9 @@ echo 'Hadoop files removed.'
 
 echo 'Copy clean analysis files to hdfs.'
 
-hdfs dfs -put /$dir1/data/analysis_output/apple_result_temp.tsv /user/w205/analysis_data/apple/apple_result.tsv
-hdfs dfs -put /$dir1/data/analysis_output/samsung_result_temp.tsv /user/w205/analysis_data/samsung/samsung_result.tsv
-hdfs dfs -put /$dir1/data/analysis_output/google_result_temp.tsv /user/w205/analysis_data/google/google_result.tsv
+hdfs dfs -put /$dir1/data/analysis_output_temp/apple_result_temp.tsv /user/w205/analysis_data/apple/apple_result.tsv
+hdfs dfs -put /$dir1/data/analysis_output_temp/samsung_result_temp.tsv /user/w205/analysis_data/samsung/samsung_result.tsv
+hdfs dfs -put /$dir1/data/analysis_output_temp/google_result_temp.tsv /user/w205/analysis_data/google/google_result.tsv
 hdfs dfs -put /$dir1/src/scripts/features.txt /user/w205/analysis_data/features/features.txt
 
 sleep 5
