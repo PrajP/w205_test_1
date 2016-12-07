@@ -68,7 +68,7 @@ echo 'Copy clean analysis files to hdfs.'
 hdfs dfs -put /$dir1/data/analysis_output/apple_result_temp.tsv /user/w205/analysis_data/apple/apple_result.tsv
 hdfs dfs -put /$dir1/data/analysis_output/samsung_result_temp.tsv /user/w205/analysis_data/samsung/samsung_result.tsv
 hdfs dfs -put /$dir1/data/analysis_output/google_result_temp.tsv /user/w205/analysis_data/google/google_result.tsv
-hdfs dfs -put /$dir1/data/analysis_output/features.txt /user/w205/analysis_data/features/features.txt
+hdfs dfs -put /$dir1/src/scripts/features.txt /user/w205/analysis_data/features/features.txt
 
 sleep 5
 
