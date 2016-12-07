@@ -80,7 +80,9 @@ echo 'Files moved to final destination.'
 #cd /data/src/scripts/
 cd /$dir1/src/scripts
 
+echo 'Load product analytics data:'
 echo $(pwd)
+
 
 hive -f $(pwd)/analytics_ddl.sql
 
