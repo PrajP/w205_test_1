@@ -26,7 +26,7 @@ echo $(pwd)
 #chmod 777 /data/W205_5_group_allan_eric_praj/Project-1/data/rawdata/
 chmod 777 /$dir1/data/rawdata/
 chmod 777 /$dir1/src/scripts/
-
+chmod 777 /$dir1/data/analysis_output/
 
 
 cd /$dir1/src/scripts/

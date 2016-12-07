@@ -45,9 +45,9 @@ echo 'Removed hive table location files..'
 
 echo 'Copy clean analysis files after removing headers to as temporary files.'
 
-tail -n +2 /$dir1/data/analysis_output/apple_result.tsv > /data/analysis_output/apple_result_temp.tsv
-tail -n +2 /$dir1/data/analysis_output/google_result.tsv > /data/analysis_output/google_result_temp.tsv
-tail -n +2 /$dir1/data/analysis_output/samsung_result.tsv > /data/analysis_output/samsung_result_temp.tsv
+tail -n +2 /$dir1/data/analysis_output/apple_result.tsv > /$dir1/data/analysis_output/apple_result_temp.tsv
+tail -n +2 /$dir1/data/analysis_output/google_result.tsv > /$dir1/data/analysis_output/google_result_temp.tsv
+tail -n +2 /$dir1/data/analysis_output/samsung_result.tsv > /$dir1/data/analysis_output/samsung_result_temp.tsv
 
 sleep 5
 
