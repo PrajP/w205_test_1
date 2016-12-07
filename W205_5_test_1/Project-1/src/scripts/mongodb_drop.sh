@@ -29,7 +29,7 @@ for json in $(cat file_list.txt); do
   product=$(echo $json| cut -d"_" -f 1)
   echo "Product Name : "$product
 
-  mongo $string1$product$string2 --eval collection $string1$product$string3.drop()
+  mongo $string1$product$string2 --eval collection $string1$product$string3.drop
   
   #mongoimport -d $string1$product$string2 -c $string1$product$string3 --drop --file file.json
   
